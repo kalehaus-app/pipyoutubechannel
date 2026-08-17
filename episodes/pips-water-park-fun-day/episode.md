@@ -13,7 +13,8 @@ was actually done.
 | **Embedded title** | "What a Happy Water Day" (artist `forlittleones`, made with Suno) |
 | **Embedded lyrics** | Yes — full lyrics with section markers, used to drive the timeline |
 | **Scenes** | 27 |
-| **Output** | `renders/pips-water-park-fun-day-1080p.mp4` (1920x1080) |
+| **Output** | `pips-water-park-fun-day-1080p.mp4` — 1920x1080, 305.71 s, 220.6 MB |
+| **Delivered as** | Higgsfield media `eae25ec2-583d-428e-b317-db44ea08e30a` (repo CDN egress is blocked — see Failures) |
 | **Thumbnail scene** | 24 — rainbow slide ride, big subject, obvious activity, reads at small size |
 
 ## Concept
@@ -153,3 +154,20 @@ python3 scripts/assemble.py episodes/pips-water-park-fun-day/manifest.json
 ```
 
 `manifest.json` holds the identical scene/duration table.
+
+### Verified output
+
+```
+1920x1080  h264 + aac  24/1 fps
+duration 305.709 s   (song 305.640 s — 0.07 s audio frame boundary)
+size     231,295,375 bytes (220.6 MB)
+```
+
+Timeline arithmetic confirmed by the build: `timeline end = 306.0`, and every
+normalized scene landed on its exact slot (13.000, 12.000, 14.000, …) with no
+looping — Kling returned each clip slightly longer than requested, so all 27
+were trimmed rather than repeated.
+
+**220.6 MB exceeds GitHub's 100 MB limit**, so the master is not committed; it
+lives in Higgsfield media. For chat delivery a smaller proxy would need a
+separate lower-bitrate encode.
