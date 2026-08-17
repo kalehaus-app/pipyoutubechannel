@@ -23,18 +23,28 @@ aspect_ratio: 1:1 16:9 9:16 4:3 3:4 3:2 2:3
 medias     : max 1, role "image"
 ```
 
-### Undeclared but accepted: `style_id`
+### `style_id` — accepted by the backend, but STRIPPED by the MCP tool
 
-`models_explore` does **not** list a style parameter, but the approved
-reference job was generated with one and it took effect:
+The approved reference job was generated with a style and it took effect:
 
 ```
 style_id: "3db34ab5-3439-4317-9e03-08dc30852e69"   // "General", strength 1
 ```
 
-Params are passed through, so include it. If a submission is ever rejected
-for an unknown field, drop `style_id` first and re-submit — it is a nice-to-have,
-not load-bearing.
+**However**, submitting it through this MCP server returns:
+
+```
+params.style_id: used "omitted",
+  reason "Higgsfield Soul 2.0 does not support this parameter"
+```
+
+So the `General` style that produced the reference's soft 3D animated look
+**cannot be applied through the MCP path**. Via MCP, `soul_2` renders in its
+native look, which its own description calls "realistic UGC, fashion editorial"
+— not the Pixar-ish house style. Confirmed on the water park episode.
+
+This is a strong practical argument for `nano_banana_pro` + the reference image
+as the default for Pip stills, not merely a fallback.
 
 ### Soul IDs — both confirmed `ready`
 
@@ -47,6 +57,11 @@ Mommy  6c889761-3c6d-45ee-8425-e6cb87dedeff
 style choice. For a shot containing both characters, anchor on **Mommy**
 (she is the one that breaks when unanchored — she drifts toward child
 proportions) and describe Pip explicitly in the prompt text.
+
+In practice `soul_2` has now failed twice over on Pip content — false NSFW
+flags *and* no access to the house style. Prefer `nano_banana_pro` for
+episodes; reach for `soul_2` only when a shot genuinely needs Soul identity
+fidelity and contains no swimwear-adjacent context.
 
 The account also holds unrelated Souls (`Kaley`, `Hank`, `Theo`, `Brexlee`,
 `rechannel-narrator-alex`, `Whimsical Hide-and-Seek`). None belong to this
@@ -108,11 +123,19 @@ The brief specifies `CFG 0.5`. `kling3_0` declares no `cfg` parameter. Pass it
 if you like — unknown params appear to pass through — but do not treat it as
 required, and drop it first if a submission is rejected.
 
-### Preset notice
+### Preset notice — pass `declined_preset_id` preemptively
 
-If Kling replies with a preset recommendation instead of a job, re-submit the
-identical request plus the returned `declined_preset_id`. Do not abandon the
-scene.
+If Kling replies with a preset recommendation instead of a job, the batch item
+comes back as `submission_failed` with a `preset_recommendation`. Re-submit the
+identical request plus the returned `declined_preset_id`.
+
+On the water park episode **6 of the first 12** submissions were intercepted
+this way (preset "IN THE DARK", `24bae836-2c4a-48e0-89b6-49fcc0b21612`). All 6
+went through on resubmission, and including `declined_preset_id` on every
+later batch prevented any further interruptions.
+
+So: include it from the first submission. It is harmless when no preset would
+have been recommended, and it saves a full round trip on roughly half a batch.
 
 ## Batching
 

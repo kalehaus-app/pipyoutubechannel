@@ -118,9 +118,47 @@ If Kling returns a preset recommendation, re-submit with the returned
 Clip URLs come back from `jobs_wait` / `show_generation_by_ids`. Save into
 `episodes/<slug>/clips/` named by scene: `s01.mp4`, `s02.mp4`, …
 
-Some CDN hosts are blocked by this environment's egress proxy. If a download
-returns `CONNECT tunnel failed, response 403`, that is the proxy, not a bad
-URL — see `/root/.ccr/README.md`. Never disable TLS verification.
+### The CDN egress block — read before planning assembly
+
+Both Higgsfield result CDNs are **blocked by the session's egress policy**:
+
+```
+d8j0ntlcm91z4.cloudfront.net   403 on CONNECT   (generation results)
+d2ol7oe51mr4n9.cloudfront.net  403 on CONNECT   (uploaded media)
+```
+
+A `CONNECT tunnel failed, response 403` is the org policy, not a bad URL.
+Never disable TLS verification, never route around it, never retry blindly.
+
+**This means clips cannot be downloaded into the session container, so
+`scripts/assemble.py` cannot run locally.** Plan for it from the start.
+
+### Assembling in the Higgsfield sandbox instead
+
+`sandbox_exec` runs a Linux box on Higgsfield's side with ffmpeg, ffprobe,
+ImageMagick and python3 preinstalled, and it reaches the media natively. Its
+own tool description directs you to use it for ffmpeg work. Nothing blocked
+transits this container.
+
+Getting the user's MP3 in: `media_upload` returns a presigned URL on
+`fast-and-furious-input-prod-*.s3.amazonaws.com`, which **is** permitted. PUT
+the bytes, then `media_confirm`. The sandbox then curls it from the media URL.
+
+Getting the master out: call `media_upload` for the output **before** starting
+the build, and append the `curl -X PUT --upload-file` to the *same* command.
+
+Sandbox gotchas that matter:
+
+- It is discarded ~10 s after a call returns. Chain everything with `&&`, or
+  use `background: true` and poll.
+- **Poll at least every 60 s** or the background process dies with the sandbox.
+- The tool call itself may time out even with `background: true` — the job
+  usually survives. Check `~/.bg/*.log` before assuming failure.
+- `timeout_seconds` caps at 120.
+
+Because the final MP4 lives on a blocked CDN, it cannot be pulled back into
+the repo from this environment. Deliver the Higgsfield media URL and keep the
+manifest committed so the render is reproducible.
 
 ## 7. Assemble
 

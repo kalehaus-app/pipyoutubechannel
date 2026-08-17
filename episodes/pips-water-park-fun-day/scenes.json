@@ -1,0 +1,114 @@
+{
+  "_note": "Source of truth for this episode. image_prompt = prefix + action + suffix.",
+  "prefix": "Match the character designs and the soft polished 3D animated family-film look of the reference image - Pip, a toddler boy with curly brown hair, huge sparkly expressive eyes and rosy cheeks, wearing a sunny-yellow romper with 'Pip' in red bubble letters on the chest; his clearly adult Mommy, a tall grown woman in her early 30s with shoulder-length brown hair wearing a wholesome casual summer top and shorts; and Teddy, Pip's small two-tone red-and-blue plush bear which always stays obviously a stuffed toy. All scenes happen in the SAME enormous sunny water park: giant rainbow-striped slide, arcing white fountains, sparkling turquoise pools, splash pads, palm trees, colorful bunting. Create a NEW scene: ",
+  "suffix": " Bright sunny outdoor lighting, vibrant but tasteful preschool palette, expressive faces, clear readable physical action, cinematic depth. Wholesome G-rated family scene, fully clothed. ONLY one adult and ONLY one toddler and the one bear. No other people, no other children. No written text, signs, banners, labels or letters anywhere except 'Pip' in red bubble letters on the romper.",
+  "scenes": [
+    {"n": 1, "start": 0.0, "dur": 13, "beat": "HOOK - water park reveal",
+     "action": "a wide cinematic establishing shot at the entrance of an ENORMOUS colorful water park on a bright sunny blue-sky day. Pip stands in the foreground seen from behind and slightly to the side, head tilted all the way back, mouth open in pure astonishment, hugging Teddy against his chest. Towering ahead of him: the giant rainbow slide, arcing fountains, sparkling pools. Mommy stands close beside him smiling down at him, clearly much taller and larger than the tiny toddler.",
+     "motion": "Slow majestic camera push-in past Pip toward the towering rainbow slide as fountains erupt in the background. Pip's head tilts further back in wonder, his grip tightening on Teddy, then he bounces once on his toes with excitement. Mommy looks down at him and laughs warmly."},
+
+    {"n": 2, "start": 12.5, "dur": 12, "beat": "Pip's reaction close-up",
+     "action": "a close-up reaction shot of Pip's face filling much of the frame, eyes going enormous and sparkling with excitement, mouth spreading into a huge open grin, Teddy squeezed up beside his cheek. Softly blurred colorful water park behind him.",
+     "motion": "Pip's eyes widen dramatically as an idea hits him, his grin explodes into a delighted open-mouth smile, and he squeezes Teddy up against his cheek. He points off-screen with his free hand and bounces on his toes. Gentle camera push-in."},
+
+    {"n": 3, "start": 24.0, "dur": 12, "beat": "Entering the park",
+     "action": "a medium tracking shot of Mommy holding Pip's hand as they walk in through the colorful water park gateway, Pip skipping and pulling ahead eagerly with Teddy tucked under his other arm, palm trees and bunting overhead.",
+     "motion": "Side-tracking camera follows them walking in. Pip skips ahead, straining against Mommy's hand and pulling her along, feet pattering fast. He looks back at her with a huge grin, then forward again. Mommy laughs and lengthens her stride to keep up."},
+
+    {"n": 4, "start": 35.5, "dur": 12, "beat": "Arriving at the splash pad",
+     "action": "a wide shot of the bright splash-pad area with shallow turquoise water and colorful mushroom fountains. Pip runs toward the water's edge in the midground while Mommy kneels in the foreground setting down a striped towel and a beach bag.",
+     "motion": "Pip runs away from camera toward the shallow water, arms pumping, Teddy bouncing in one hand, then skids to a sudden stop right at the edge. Mommy, kneeling in the foreground, sets the towel down and looks up to watch him. Warm sunlight, gentle camera drift forward."},
+
+    {"n": 5, "start": 47.0, "dur": 14, "beat": "INSTRUMENTAL - testing the water with toes",
+     "action": "a low close shot at water level of Pip standing at the very edge of the shallow pool, one bare foot lifted and one tiny toe extended toward the sparkling water, face scrunched in comic hesitation. Teddy held protectively high in his other arm.",
+     "motion": "Pip slowly extends one toe toward the water, touches the surface, and yanks his foot back with a comic wide-eyed gasp. He hesitates, scrunches his face in determination, and tries again, this time holding his toe in the water. A slow delighted grin spreads across his face. Teddy stays held high and dry."},
+
+    {"n": 6, "start": 60.5, "dur": 12, "beat": "First splashing",
+     "action": "a medium shot of Pip standing ankle-deep in the sparkling shallow water, stomping both feet and sending bright water droplets flying everywhere, face lit with pure delight. Teddy held up at arm's length above the spray, comically trying to stay dry.",
+     "motion": "Pip stomps both feet hard in the shallow water, sending sparkling droplets flying in all directions, and laughs with his head thrown back. He hops from foot to foot, splashing harder each time, while holding Teddy stretched up high above the spray. Playful handheld camera bounce."},
+
+    {"n": 7, "start": 72.0, "dur": 12, "beat": "COMEDY - surprise ground fountain",
+     "action": "a medium-wide shot on the splash pad as a sudden jet of water erupts from a ground nozzle directly in front of Pip. Pip is caught mid-startle, tipping backward off balance with wide surprised eyes, Teddy flying up in one hand, water column bright in the sunlight.",
+     "motion": "A ground fountain suddenly erupts right in front of Pip. He startles violently backward, arms flailing, and plops down onto his bottom in the shallow water with a splash. He sits blinking in shock for a beat, then bursts into giggles and kicks his feet. Teddy lands safely in his lap."},
+
+    {"n": 8, "start": 83.5, "dur": 12, "beat": "COMEDY - the proud dodge",
+     "action": "a dynamic medium shot of Pip leaping sideways to dodge an erupting ground fountain, landing in a triumphant pose with both arms thrown up in victory and a hugely proud grin, Teddy raised overhead. The dodged water column sprays behind him.",
+     "motion": "Pip springs sideways, dodging the erupting fountain cleanly. He lands, plants his feet, and throws both arms up in a proud victory pose, holding Teddy overhead and beaming toward Mommy off-screen. He does his little two-foot celebration bounce. Camera pushes in on his triumphant face."},
+
+    {"n": 9, "start": 95.0, "dur": 12, "beat": "COMEDY - sprayed from behind (payoff)",
+     "action": "a medium shot of Pip mid-celebration when a second ground fountain erupts directly behind him and sprays the top of his curly hair. Pip is frozen mid-grin, eyes enormous, curls flattened and dripping, water arcing over his head.",
+     "motion": "While Pip is still celebrating, a second fountain erupts right behind him and sprays straight onto his curly hair. He freezes completely mid-grin, eyes going enormous, curls flattening and dripping down his face. He holds the frozen beat, blinks once, then bursts into helpless laughter. Teddy dangles from one hand."},
+
+    {"n": 10, "start": 106.5, "dur": 12, "beat": "COMEDY - Teddy gets splashed",
+     "action": "a close shot of Pip holding Teddy out at arm's length just as a fountain drenches the little plush bear. Teddy is comically soaked and droopy, water streaming off him. Pip's face is caught in an exaggerated worried gasp.",
+     "motion": "Pip holds Teddy out at arm's length and a fountain drenches the bear completely. Teddy goes comically soggy and droopy. Pip gasps with an exaggerated worried 'Oh, Teddy!' expression, pulls him in close, and gently squeezes the water out of Teddy's ears. Then Pip's worry melts into a giggle."},
+
+    {"n": 11, "start": 118.0, "dur": 11, "beat": "Beginner slide",
+     "action": "a dynamic shot from the bottom of a short, gentle, brightly colored beginner water slide as Pip comes sliding down it clutching Teddy, legs out in front of him, face bright with thrilled delight, a small splash forming at the base.",
+     "motion": "Pip comes whooshing down the small colorful slide clutching Teddy to his chest, legs out in front, hair streaming back, laughing the whole way. He hits the shallow water at the bottom with a cheerful little splash and sits up soaked and beaming, holding Teddy up in triumph."},
+
+    {"n": 12, "start": 128.5, "dur": 12, "beat": "INSTRUMENTAL - tipping bucket setup, Mommy notices first",
+     "action": "a wide shot of the giant tipping-bucket structure. High above, an enormous colorful bucket is nearly full and just beginning to tilt. Below it Pip plays happily and obliviously in the shallow water with Teddy. In the foreground Mommy's eyes go wide as she notices the bucket and raises a hand.",
+     "motion": "Pip splashes happily and obliviously below the giant bucket. Above him the enormous bucket fills and slowly begins to tilt. In the foreground Mommy's eyes go wide as she spots it; she raises a hand and half-rises, mouth opening. Camera slowly tilts up from Pip toward the tipping bucket, building anticipation."},
+
+    {"n": 13, "start": 140.0, "dur": 13, "beat": "PAYOFF - the bucket dumps",
+     "action": "a dramatic shot of Pip looking straight upward with dawning realization, eyes enormous, as the huge bucket tips directly above him and a massive curtain of sparkling water begins to fall toward him. Teddy clutched to his chest.",
+     "motion": "Pip slowly tilts his head back and looks up, his expression shifting from happy to dawning realization, eyes going enormous. A beat of stillness. Then the enormous bucket dumps a huge curtain of sparkling water straight down onto him. He emerges completely drenched, hair plastered flat over his eyes, blinking. He peels the hair off his face and erupts into delighted laughter."},
+
+    {"n": 14, "start": 152.5, "dur": 12, "beat": "Lazy river - calm and warm",
+     "action": "a serene wide shot of the gently winding lazy river. Pip floats along on a bright colorful ring float with Teddy propped up beside him, both perfectly content, dappled sunlight on the water. Mommy walks alongside in the shallow edge, smiling and relaxed.",
+     "motion": "Pip drifts slowly along on the ring float, kicking his feet lazily and patting Teddy who is propped beside him. He tips his head back to feel the sun, completely content. Mommy strolls alongside in the shallow water, trailing a hand and smiling at him. Slow gentle drifting camera, dappled light."},
+
+    {"n": 15, "start": 164.0, "dur": 12, "beat": "COMPLICATION - Teddy drifts away",
+     "action": "a shot from behind and past Pip on his float, showing Teddy having slipped off the edge and now bobbing gently away on the current a short distance downstream. Pip faces the other way, still happily oblivious, sunlight sparkling on the water between them.",
+     "motion": "Teddy slips quietly off the edge of the float and lands in the water, bobbing gently away on the current. Pip, facing the other way, remains happily oblivious, kicking his feet. The camera holds on Teddy drifting a short safe distance downstream, then drifts back toward Pip. Calm, gentle, never alarming."},
+
+    {"n": 16, "start": 175.5, "dur": 12, "beat": "Pip notices",
+     "action": "a close reaction shot of Pip looking down at the empty spot beside him on the float, his happy expression collapsing into a wide-eyed worried gasp, one hand patting the empty float where Teddy should be.",
+     "motion": "Pip pats the float beside him, feels nothing, and looks down. His happy expression collapses into a wide-eyed gasp. He pats the empty spot again urgently, then whips his head left, then right, searching, his little face crumpling with worry. Camera pushes in gently on his face."},
+
+    {"n": 17, "start": 187.0, "dur": 12, "beat": "PIP ACTS - paddling for Teddy",
+     "action": "a determined action shot of Pip leaning forward over the front of his float, both hands paddling hard at the water, face set with fierce determination, eyes locked on Teddy bobbing just ahead. Mommy visible behind in the shallows, watching encouragingly but not intervening.",
+     "motion": "Pip spots Teddy ahead and his worry hardens into determination. He leans forward over the front of the float and paddles hard with both hands, splashing, kicking his feet, closing the gap. Mommy watches from the shallows behind, hand at her chest, encouraging but deliberately not reaching in. Camera tracks alongside."},
+
+    {"n": 18, "start": 198.5, "dur": 13, "beat": "RESCUE - the relieved hug",
+     "action": "a warm close shot of Pip having just pulled soggy Teddy out of the water, hugging him fiercely against his chest with both arms, eyes squeezed shut, face flooded with pure relief and love. Golden sparkling water all around.",
+     "motion": "Pip stretches out and closes both hands around Teddy, pulling the soggy bear out of the water. He hugs Teddy fiercely against his chest with both arms, squeezes his eyes shut, and presses his cheek into Teddy's head with pure relief. He rocks him once, then opens his eyes and beams. Camera slowly pushes in, warm golden light."},
+
+    {"n": 19, "start": 211.0, "dur": 12, "beat": "ADVENTURE BREAK - the giant slide revealed",
+     "action": "a dramatic low-angle shot from behind Pip, tiny in the foreground still holding wet Teddy, as he looks up at the ENORMOUS rainbow-striped water slide towering impossibly high above him against the blue sky, water rushing down its curves.",
+     "motion": "Camera starts low on tiny Pip from behind and tilts slowly and dramatically upward, revealing the enormous rainbow slide towering higher and higher above him against the blue sky, water rushing down its curves. Pip's head tips back further and further. He hugs wet Teddy tighter against his chest."},
+
+    {"n": 20, "start": 222.5, "dur": 11, "beat": "Excited but nervous",
+     "action": "a close shot of Pip's face caught between huge excitement and real nervousness - eyes wide and shining, a wobbly half-smile, one cheek pressed against Teddy as he squeezes the bear tightly for courage. The rainbow slide blurred and huge behind him.",
+     "motion": "Pip's excited grin wavers as nerves creep in. He squeezes Teddy tightly against his cheek for courage, his knees wobbling slightly beneath him. He glances up at the slide, swallows, and looks back down at Teddy with a small uncertain smile. Intimate slow camera push-in."},
+
+    {"n": 21, "start": 233.0, "dur": 11, "beat": "Mommy reassures without solving it",
+     "action": "a warm two-shot of Mommy kneeling down to Pip's eye level, one gentle hand on his shoulder, smiling at him with calm encouragement. Pip looks up at her holding Teddy. She is clearly a full-grown adult, much larger than him even while kneeling.",
+     "motion": "Mommy kneels down to Pip's eye level and rests a gentle hand on his shoulder, smiling warmly and saying something encouraging. Pip looks up at her, uncertain, then his expression steadies. She nods at him and gestures toward the slide, encouraging but deliberately not picking him up or leading him. Warm soft light."},
+
+    {"n": 22, "start": 243.5, "dur": 11, "beat": "Pip decides - the climb",
+     "action": "a rising shot of Pip climbing the colorful slide steps with fierce determination, Teddy clamped under one arm, small legs working hard up the big steps, the park spreading out below and behind him.",
+     "motion": "Pip takes a big visible breath, sets his jaw with determination, and starts climbing the big colorful steps, Teddy clamped under one arm, his small legs working hard. The camera rises with him as the park spreads out further below. Near the top he pauses, looks out at the view, and his eyes go wide."},
+
+    {"n": 23, "start": 254.0, "dur": 11, "beat": "The top - the launch",
+     "action": "a shot at the very top of the enormous rainbow slide looking down its steep sparkling chute. Pip sits at the lip holding Teddy up in front of him with both hands, taking a huge determined breath, a brave grin breaking across his face.",
+     "motion": "Pip sits at the lip of the enormous slide, holds Teddy up in front of him with both hands, and takes one huge visible breath. His nervous face resolves into a brave delighted grin. He nods at Teddy, hugs him tight to his chest, and pushes off, dropping away from camera down the sparkling chute."},
+
+    {"n": 24, "start": 264.5, "dur": 10, "beat": "BIG PAYOFF - the ride down",
+     "action": "an exhilarating action shot racing down the giant rainbow slide with Pip, water spraying in sparkling sheets around him as he rockets through a banked turn clutching Teddy, curly hair streaming back, face wide open with pure joy.",
+     "motion": "Pip rockets down the giant rainbow slide, banking hard through a sweeping turn with sparkling water spraying up around him, curly hair streaming back, mouth wide open in a shriek of pure joy, Teddy clutched tight to his chest. The camera races down the chute with him through the turns. Fast, thrilling, sparkling."},
+
+    {"n": 25, "start": 274.0, "dur": 11, "beat": "SPLASH + victory celebration",
+     "action": "a joyful shot at the splash pool as Pip surfaces from an enormous white splash, soaking wet and beaming, holding dripping Teddy triumphantly overhead in both hands. Mommy in the background at the pool edge, laughing and clapping with her arms up.",
+     "motion": "Pip hits the pool with an enormous white splash and surfaces beaming, water streaming off his curls. He thrusts Teddy triumphantly overhead in both hands and does his little two-foot celebration bounce in the shallow water. In the background Mommy laughs and claps with her arms raised. Water sparkles everywhere."},
+
+    {"n": 26, "start": 284.5, "dur": 11, "beat": "WARM ENDING - towels",
+     "action": "a cozy warm shot of Mommy wrapping soaking-wet Pip in a big fluffy striped towel, only his beaming face and wet curls showing. Beside him, Teddy has been wrapped in his own comically tiny matching towel. Late golden afternoon light.",
+     "motion": "Mommy wraps a big fluffy towel around soaking wet Pip and rubs his shoulders warm; only his beaming face and dripping curls show. Pip looks down and giggles as she tucks a comically tiny matching towel around Teddy too. Pip hugs the little bundled bear against his chest. Warm golden late-afternoon light."},
+
+    {"n": 27, "start": 295.0, "dur": 11, "beat": "Final shot - sleepy and happy",
+     "action": "a tender final shot of Pip, wrapped snugly in his towel, eyes drooping almost shut with a contented little smile, cuddling Teddy tightly against his cheek as they head home. Mommy close beside him, warm golden sunset light glowing behind them.",
+     "motion": "Pip, bundled snugly in his towel, cuddles Teddy against his cheek. His eyelids droop lower and lower, fighting sleep, a contented little smile on his face. He yawns hugely, nestles into Teddy, and his eyes finally close. Mommy leans in close beside him. Slow gentle camera drift, warm golden sunset light."}
+  ]
+}
