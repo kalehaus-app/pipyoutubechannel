@@ -1,0 +1,13 @@
+{
+  "title": "<Episode Title>",
+  "aspect": "16:9",
+  "fps": 24,
+  "crossfade": 0.5,
+  "audio": "song/song.mp3",
+  "output": "renders/final.mp4",
+  "scenes": [
+    {"n": 1, "clip": "clips/s01.mp4", "duration": 8.0},
+    {"n": 2, "clip": "clips/s02.mp4", "duration": 10.0},
+    {"n": 3, "clip": "clips/s03.mp4"}
+  ]
+}

@@ -1,0 +1,25 @@
+# Media stays out of git — GitHub's normal file limit is 100 MB and renders
+# routinely exceed it. The prompts, job IDs and manifests are what matter and
+# those are committed.
+episodes/*/clips/
+episodes/*/images/
+episodes/*/renders/
+episodes/*/song/
+
+*.mp4
+*.mov
+*.webm
+*.mp3
+*.wav
+*.png
+*.jpg
+*.jpeg
+*.webp
+
+# Keep the template's structure visible
+!episodes/_TEMPLATE/**
+
+.DS_Store
+__pycache__/
+*.pyc
+.venv/
