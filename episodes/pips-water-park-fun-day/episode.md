@@ -171,3 +171,25 @@ were trimmed rather than repeated.
 **220.6 MB exceeds GitHub's 100 MB limit**, so the master is not committed; it
 lives in Higgsfield media. For chat delivery a smaller proxy would need a
 separate lower-bitrate encode.
+
+## Delivery
+
+Both files live in the Higgsfield media library (the repo cannot host them —
+220 MB exceeds GitHub's limit, and the CDN is blocked from the session).
+
+| | Media ID | Spec |
+|---|---|---|
+| **Master** | `eae25ec2-583d-428e-b317-db44ea08e30a` | 1920x1080, 305.71 s, 220.6 MB — upload this to YouTube |
+| **Preview** | `c514abee-043b-4cad-ac8b-ed690228d264` | 640x360, 305.71 s, 37 MB — quick check on a phone |
+
+The preview is a downscale of the master, not a re-assembly, so it is frame-
+for-frame the same edit.
+
+### Sandbox note
+
+`sandbox_exec` with `background: true` was returning `deadline_exceeded` for
+even a trivial `sleep 100`, so long-running detached work was unavailable and
+files did **not** survive between back-to-back calls. The workaround that
+succeeded: give ffmpeg the media **URL directly as its input** so the download
+overlaps the transcode, and chain the upload with `&&` in the *same* call —
+the whole job then fits inside a single sub-60 s foreground call.
