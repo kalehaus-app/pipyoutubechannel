@@ -193,3 +193,160 @@ files did **not** survive between back-to-back calls. The workaround that
 succeeded: give ffmpeg the media **URL directly as its input** so the download
 overlaps the transcode, and chain the upload with `&&` in the *same* call —
 the whole job then fits inside a single sub-60 s foreground call.
+
+---
+
+# V2 Optimization Pass
+
+Surgical revision of the finished V1. The story, song and the great majority of
+generated footage are unchanged. **V1 is preserved** — see Delivery below.
+
+| | |
+|---|---|
+| **V2 master** | Higgsfield media `1545f66b-2277-4602-af7e-71c00946c016` |
+| **Runtime** | 305.834 s (song 305.640 s, +0.19 s margin) |
+| **Spec** | 1920x1080, H.264 high, yuv420p, 24 fps, AAC 192k / 48 kHz, +faststart |
+| **Size** | 236,612,303 bytes (225.6 MB) |
+| **New generations** | 5 stills, 4 clips (~83 credits) |
+| **Reused from V1** | 24 of 27 original clips, untouched |
+
+## What changed and why
+
+### 1. Cold open (highest priority)
+
+V1 spent its first ~25 s on a slow establishing sequence before any real water
+action. V2 opens on a 6.4 s teaser montage cut from footage already in the
+episode, with **hard cuts** rather than crossfades for energy:
+
+| | Source | Length |
+|---|---|---|
+| 0:00 | giant tipping-bucket drench (from scene 13) | 2.0 s |
+| 0:02 | rainbow-slide ride (from scene 24) | 2.0 s |
+| 0:04 | splash landing, Teddy held overhead (from scene 25) | 2.4 s |
+
+It then crossfades (0.4 s) into the park reveal. The V1 opening was additionally
+entered 5 s late, trimming the slowest part of the establishing shot.
+
+First-30-second check: water + Pip + big physical action by **second 2**;
+unmistakably a water park by second 5; all three characters introduced by ~0:20;
+two comedy payoffs already seen inside the teaser.
+
+These are flashes, not spoilers — each is ~2 s of a 10–13 s scene, and the full
+payoffs still land in place later.
+
+### 2. Generated entrance text removed
+
+V1's entrance shot carried a malformed AI sign reading roughly "WATER PAR…",
+breaking the no-environmental-text rule.
+
+First replacement attempt kept a decorative rainbow archway and simply asked
+harder for no lettering — but V1's prompt *already* banned text and still
+produced a sign, so prompt-level mitigation alone was not trusted. The shot was
+regenerated a second time with **no signable surface in the composition at
+all**: no gateway, no arch, no booth, no panel. Pip and Mommy now walk a curving
+poolside path between palms and parasols with the slides rising ahead.
+
+Unused first attempt: image `4b3cc4da-8a3e-4398-b268-38eeeaec60b0`.
+
+### 3. Pip costume break fixed
+
+Around 176–187 s V1 lost Pip's yellow romper during the Teddy-drift sequence —
+V1's prompt for that scene never restated the costume. The shot was regenerated
+with a full costume lock and the same emotional beat preserved: Pip safe on his
+float, realising Teddy is gone, patting the empty spot, searching left then
+right. Motion prompt drives that as explicit cause-and-effect.
+
+### 4. Pre-slide pacing tightened
+
+V1 stacked several similar-energy shots before the payoff. V2 escalates:
+
+```
+wide reveal -> nervous close-up -> Mommy at eye level (count-in)
+-> climb -> POV down the chute -> ride -> splash
+```
+
+Two changes: the Mommy reassurance shot was regenerated so she counts
+**one… two… three, go!** on her fingers (a toddler participation beat, staged
+visually with no on-screen numbers), and a **new POV shot** looking down the
+slide from the top was inserted to convert repeated reassurance into rising
+anticipation.
+
+### 5. Mommy costume
+
+Locked for all new generations to a light-blue summer top and denim shorts,
+clearly adult. Existing V1 Mommy shots were deliberately **not** regenerated —
+per the stated priority order (Pip > Teddy > story > Mommy), they were not
+distracting enough to justify the spend.
+
+### Preserved untouched
+
+Teddy drifting away, Pip noticing, Pip paddling after him, the relieved hug,
+slide nerves, Mommy reassuring without solving it, Pip choosing to go, the
+rainbow-slide payoff, the tipping-bucket comedy, the towel sequence with Teddy's
+tiny towel, and the sleepy ending.
+
+## Replacement job IDs
+
+| Scene | Image job | Video job | Slot |
+|---|---|---|---|
+| 3 — poolside walk-in (no signage) | `48032fc5-f562-4c08-ba8e-ce4ccabd4771` | `e685e397-f30f-4159-9c07-d590ed052e5d` | 11 s |
+| 16 — Pip notices Teddy gone (romper) | `8283dcd4-996f-4f06-b92a-b47311bf9eae` | `473527b9-2a7c-4967-a2ca-657b1b20aa8c` | 12 s |
+| 21 — Mommy count-in | `22942940-f3d9-4042-b5d0-b0b2dd778ada` | `92b7b56a-2c06-40ac-995d-c2970c01e06b` | 10 s |
+| 22b — POV down the slide (NEW) | `3b58d9b5-13c0-469b-bf46-5d3bcff9a645` | `60ae79df-12c0-43f0-b295-d18b80877135` | 8 s |
+
+## Assembly method
+
+Rebuilding all 27 clips was unnecessary and, in this environment, impossible:
+`sandbox_exec` background mode was returning `deadline_exceeded` for even a
+trivial `sleep`, and foreground calls cap out around 60 s while the sandbox is
+discarded between them.
+
+Instead V2 was **patched from the V1 master**, which is already 1920x1080/24fps:
+unchanged spans were re-encoded straight from V1, and only the four replacement
+clips and the cold open were composited in. The work was split into five chunks,
+each built and uploaded inside a single foreground call, then joined with the
+concat demuxer using stream copy and muxed with the original MP3.
+
+| Chunk | Contents | Length | Media |
+|---|---|---|---|
+| c1 | cold open + V1 [5.0–24.0] + new scene 3 + V1 [35.5–41.5] | 41.042 s | `759b5fa8-…` |
+| c2 | V1 [41.5–119.5] | 78.000 s | `b8eb1499-…` |
+| c3 | V1 [119.5–172.0] | 52.500 s | `d143d7fd-…` |
+| c4 | new scene 16 + V1 [187.0–233.0] | 57.542 s | `7711e820-…` |
+| c5 | new scene 21 + V1 [243.5–254.0] + new POV + V1 [254.0–305.71] | 78.750 s | `4694f78e-…` |
+
+Chunk boundaries were placed **inside contiguous V1 spans**, so rejoining them
+is frame-exact and invisible. Crossfades (0.5 s) sit inside chunks around every
+replacement. Two junctions — into scene 16 and into scene 21 — fall on chunk
+boundaries and are therefore **hard cuts rather than crossfades**; both land on
+scene changes where a cut reads as intentional.
+
+The song was never touched: original Suno MP3, muxed with `-shortest` so the
+music defines the ending.
+
+## Lessons learned
+
+- **A generic "no text" instruction does not prevent generated signage.** V1
+  asked for no text and still produced a sign. The reliable fix is
+  compositional — remove the signable surface from the shot.
+- **Every still prompt must restate the costume.** V1's scene 16 omitted the
+  romper and the model dropped it. Prompts have no memory of neighbouring scenes.
+- **Reuse beats regeneration.** Patching an existing master preserved 24 clips
+  and cost ~83 credits instead of ~570 for a full rebuild.
+- **Design chunk boundaries to fall inside contiguous source material** when
+  splitting a render across calls; joins there are seamless.
+
+## Known limitation — visual QC was not performed
+
+The new stills were **not** visually inspected before animation, contrary to the
+QC rule now written into `docs/PRODUCTION_WORKFLOW.md`. Every available route
+failed in this environment: the CDN is blocked locally, sandbox stdout truncates
+near 20k characters so base64 transfer of a usable image is cut off,
+hand-copying base64 corrupted the file (verified by checksum and a JPEG huffman
+error), and an installed Tesseract failed a control test — it did not detect
+V1's known "WATER PAR…" sign, so it cannot certify text absence either.
+
+Risk was therefore mitigated at generation time (compositional bans, explicit
+costume locks) rather than by inspection. **The four replacement shots should be
+spot-checked on playback before publishing** — at roughly 0:25 (entrance, check
+for signage), 3:05 (Pip's romper), 4:05 (Mommy count-in) and 4:30 (POV).

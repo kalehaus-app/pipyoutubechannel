@@ -227,3 +227,102 @@ ratio, story summary, scene timeline, final scene prompts, model/job notes,
 
 That failure log is the point: it is how the next episode avoids repeating
 this episode's dead ends.
+
+## Permanent rules learned from Episode 1
+
+These came out of the V2 optimization pass on *Pip's Water Park Fun Day*.
+Apply them from the planning stage of every future episode.
+
+### Cold open rule
+
+A long-form Pip adventure must deliver its primary visual promise within the
+**first 5–10 seconds**: water, Pip, and a big physical action. No slow
+establishing sequence, no title card. If the strongest spectacle happens at
+4:20, cut a 4–7 second teaser of it to the very front — short flashes, not
+spoilers — then transition into the real opening.
+
+Fast cuts (no crossfade) in the teaser; the rest of the episode keeps the
+smooth 0.5s crossfade language.
+
+### Costume lock rule
+
+Before generating anything, write down the exact costume for every recurring
+character **and repeat it verbatim in every single still prompt**. The model
+does not remember earlier scenes. A scene prompt that omits the romper will
+eventually produce a Pip without it.
+
+```
+Pip    sunny-yellow romper, 'Pip' in red bubble letters, every scene
+Mommy  <one specific episode outfit>, adult, much taller than Pip
+Teddy  small plush bear, red head, blue body, obviously a stuffed toy
+```
+
+### Pip romper rule
+
+The yellow romper is part of Pip's identity, not wardrobe. It must not
+disappear during normal adventure scenes — including water scenes. Losing it
+breaks character recognition and brand consistency at once.
+
+### Environmental text ban
+
+Never ask an image model for signs, banners, labels or environmental writing.
+Beyond that, **avoid compositions that contain a signable surface at all** —
+entrance archways, gateways, ticket booths, flat panels. A generic "no text"
+instruction is not sufficient: Episode 1 V1 asked for no text and still
+produced a malformed "WATER PAR…" sign on the park entrance.
+
+The robust fix is compositional. Replace the gateway with an open pathway,
+palms and parasols; there is then nothing for the model to write on.
+
+### Character continuity checklist
+
+Every still prompt states explicitly: exactly ONE Pip, ONE Mommy (when
+present), ONE Teddy (when present); Mommy clearly adult-sized; Pip clearly
+toddler-sized; no duplicate humans; no background children; no malformed
+Teddy; no random text.
+
+### Still QC before animation
+
+A successful image API response is **not** an approved production frame.
+Inspect the still before spending an animation generation on it. Reject and
+regenerate for: missing romper, malformed 'Pip' lettering, Mommy too young or
+toddler-sized, extra or duplicate characters, wrong Teddy colors, dominant
+malformed hands, any environmental text, unrelated location, static or
+confusing composition, obvious artifacts.
+
+**Environment caveat:** in this session, visual inspection of generated frames
+was not achievable — the CDN is blocked locally, sandbox stdout truncates
+around 20k characters so base64 transfer of a usable image fails, hand-copying
+base64 corrupts it, and OCR could not even detect the known V1 sign (control
+test failed). Until a viewing path exists, mitigate at generation time
+(compositional bans, costume locks) and spot-check the final render, rather
+than claiming a QC pass that did not happen.
+
+### Story pacing rule
+
+Never run 3+ consecutive shots that communicate the same emotional beat. The
+pre-slide sequence in V1 stacked reassurance shots; V2 escalates instead:
+
+```
+WOW (wide reveal) -> nervous (close-up) -> reassurance (Mommy at eye level)
+-> decision (climb) -> anticipation (POV down the chute) -> GO (payoff)
+```
+
+Vary shot type as well as content: establishing wide, medium action, close
+reaction, POV, payoff.
+
+### Teddy story rule
+
+Every long-form adventure needs at least one meaningful Teddy beat —
+emotional, comedic or plot-driving. Teddy is Pip's best friend, not a prop.
+
+### Pip agency rule
+
+When a problem occurs, Pip participates in solving it. Mommy provides safety
+and reassurance, not every solution.
+
+### Toddler participation rule
+
+Include 1–3 moments a child can anticipate or join in with: a "one… two…
+three, go!" staged to the music, spotting Teddy, waiting for a splash. Stage
+them visually — never with on-screen text or numbers.
