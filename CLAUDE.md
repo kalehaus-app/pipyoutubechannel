@@ -39,6 +39,7 @@ Detailed rules live in `docs/`. Do not duplicate them into episode files.
 | Shorts format | `docs/SHORTS_PLAYBOOK.md` |
 | **Verified** Higgsfield model IDs and params | `docs/HIGGSFIELD_REFERENCE.md` |
 | Titles, descriptions, tags | `docs/METADATA_GUIDE.md` |
+| **Current channel goal** and cost-per-Short math | `docs/MONETIZATION.md` |
 
 ## Environment (read this first each session)
 

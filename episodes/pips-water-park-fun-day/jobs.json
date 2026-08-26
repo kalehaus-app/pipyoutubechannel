@@ -234,5 +234,12 @@
   ],
   "v3_master_media_id": "a27c2c1f-a364-4fa7-ae8a-b5ea0e5212a5",
   "v3_preview_media_id": "c361ed59-22da-4c44-9329-6922273be49d",
-  "v3_note": "Full fast-cut pass rebuilt from the V2 master. 95 shots, 3.22s average, zero generation credits. Wide/1.28x punch-in alternation; cutting rate varies by emotional section."
+  "v3_note": "Full fast-cut pass rebuilt from the V2 master. 95 shots, 3.22s average, zero generation credits. Wide/1.28x punch-in alternation; cutting rate varies by emotional section.",
+  "shorts_recuts": {
+    "_note": "Vertical 9:16 Shorts re-cut from these same clips at zero generation credits. Cut list in episodes/water-park-shorts/edl.json.",
+    "pip-saves-teddy": "283cd429-e25a-4efc-a90a-8e66e2358171",
+    "pip-big-water-slide": "16b66e33-8b7e-4159-8cec-4c07b2c6fa22",
+    "pip-big-bucket-splash": "68ac18fa-40a6-4651-9403-4a2c68521d45"
+  },
+  "clip_real_resolution": "1928x1076 - the API job params report 1920x1080 but the delivered MP4s probe as 1928x1076. Never hard-code crop dimensions against the reported values."
 }

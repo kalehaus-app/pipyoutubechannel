@@ -326,3 +326,57 @@ and reassurance, not every solution.
 Include 1–3 moments a child can anticipate or join in with: a "one… two…
 three, go!" staged to the music, spotting Teddy, waiting for a splash. Stage
 them visually — never with on-screen text or numbers.
+
+## Repurposing long-form into Shorts — free
+
+A finished long-form episode holds 5+ minutes of generated footage. Vertical
+Shorts can be re-cut from it for **zero generation credits**, which matters a
+great deal while chasing the YPP Shorts-view threshold (`docs/MONETIZATION.md`).
+
+Cut from the **individual scene clips**, not from the master. The master's
+crossfades contaminate any window that lands on one, and a punch-in pass like
+V3 is already a crop — cropping a crop softens the result. `jobs.json` holds
+every video job ID; one `show_generation_by_ids` call turns those into
+downloadable result URLs.
+
+Method:
+
+1. Pick 5–7 beats that form a complete mini-story with its own payoff
+2. Take a 3–7 s window from each clip, skipping the first ~1.5 s (start-image hold)
+3. Center-crop to 9:16, scale to 1080x1920 with `lanczos`
+4. Hard cuts — no crossfades; Shorts pacing wants the cut visible
+5. Lay a matching segment of the original song underneath, `afade` in 0.4 / out 0.8
+6. Vary the punch-in zoom (1.0 / 1.15 / 1.25) to reuse one clip as two shots
+   without a jump cut
+
+Cropping 16:9 down to 9:16 discards ~68% of the frame width, so it only works on
+shots where the subject is near center. Wide establishing shots and anything with
+the action at frame edge will not survive the crop.
+
+### Kling clips are 1928x1076, not 1920x1080
+
+The API reports `width: 1920, height: 1080` in the job params, but the delivered
+MP4s probe as **1928x1076**. Any hard-coded `crop=608:1080` therefore fails with:
+
+```
+Invalid too big or non positive size for width '608' or height '1080'
+```
+
+Never hard-code pixel dimensions against the reported values. Use expressions
+that read the real input:
+
+```
+crop=w=trunc(ih*9/16/Z/2)*2:h=trunc(ih/Z/2)*2
+```
+
+`crop` centers x and y by default, so a centered punch-in needs nothing more.
+`scripts/assemble.py` is already safe here — it uses
+`scale=...:force_original_aspect_ratio=increase,crop=W:H`, which normalizes
+whatever arrives.
+
+### MP3s carry embedded cover art
+
+The Suno MP3 probes as two streams: `0 mp3 audio`, `1 mjpeg video`. Any filter
+graph that takes the MP3 as a direct input should reference `[N:a]` explicitly,
+or pre-extract the segment with `-vn` first, so the cover art never enters the
+video chain.

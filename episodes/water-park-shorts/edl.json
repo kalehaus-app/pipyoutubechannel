@@ -1,0 +1,54 @@
+{
+  "_note": "Three vertical Shorts re-cut from Pip's Water Park Fun Day at ZERO generation credits. Segments reference video job IDs from ../pips-water-park-fun-day/jobs.json. in/dur are seconds into the source clip; zoom is a centered punch-in applied before the 9:16 crop.",
+  "source_episode": "pips-water-park-fun-day",
+  "canvas": "1080x1920",
+  "fps": 24,
+  "cut_style": "hard cuts, no crossfade",
+  "crop": "center crop 608x1080 of the 1920x1080 source, scaled to 1080x1920 (lanczos)",
+  "audio": "segment of the original Suno MP3 (media a01f42a6-5c52-4152-9e3a-9662d53fdb6d), afade in 0.4s / out 0.8s",
+  "shorts": [
+    {
+      "slug": "pip-saves-teddy",
+      "title": "Pip Saves Teddy at the Water Park",
+      "duration": 28.3,
+      "audio_start": 158.0,
+      "segments": [
+        {"scene": 15, "clip": "b1fc5e04-1d26-41e1-9847-2ce3937cc797", "in": 1.5, "dur": 4.5, "zoom": 1.0,  "beat": "Teddy slips off the float"},
+        {"scene": 14, "clip": "dc3404a3-b23e-4c00-82b3-8c5b2cf04aeb", "in": 2.0, "dur": 3.0, "zoom": 1.0,  "beat": "Pip still oblivious"},
+        {"scene": 16, "clip": "473527b9-2a7c-4967-a2ca-657b1b20aa8c", "in": 2.0, "dur": 5.5, "zoom": 1.15, "beat": "Pip realizes Teddy is gone"},
+        {"scene": 17, "clip": "473a2e15-b0a6-4fcf-91d2-0043489c23e0", "in": 1.5, "dur": 5.5, "zoom": 1.0,  "beat": "Pip paddles after him"},
+        {"scene": 17, "clip": "473a2e15-b0a6-4fcf-91d2-0043489c23e0", "in": 7.5, "dur": 3.3, "zoom": 1.25, "beat": "punch-in, closing the gap"},
+        {"scene": 18, "clip": "b8b8e4c5-c794-4e94-93f9-799ddafda8ed", "in": 3.0, "dur": 6.5, "zoom": 1.0,  "beat": "the relieved hug"}
+      ]
+    },
+    {
+      "slug": "pip-big-water-slide",
+      "title": "Pip Goes Down the Big Water Slide",
+      "duration": 33.0,
+      "audio_start": 214.0,
+      "segments": [
+        {"scene": 19,   "clip": "50e0b621-e2d0-4f4c-a6fb-1f7b6e935c10", "in": 1.5, "dur": 5.0, "zoom": 1.0, "beat": "tilt up the giant rainbow slide"},
+        {"scene": 20,   "clip": "c36fa22e-8f00-4d7e-a488-688a8c596e49", "in": 2.0, "dur": 3.5, "zoom": 1.0, "beat": "excited but nervous"},
+        {"scene": 21,   "clip": "92b7b56a-2c06-40ac-995d-c2970c01e06b", "in": 1.5, "dur": 5.0, "zoom": 1.0, "beat": "Mommy's one-two-three"},
+        {"scene": 22,   "clip": "2a59a8da-3415-43e9-a7c8-e2a3999c689f", "in": 2.0, "dur": 4.0, "zoom": 1.0, "beat": "the climb"},
+        {"scene": "22b","clip": "60ae79df-12c0-43f0-b295-d18b80877135", "in": 1.0, "dur": 5.0, "zoom": 1.0, "beat": "POV over the lip"},
+        {"scene": 24,   "clip": "40523850-6433-4251-9be7-bd4827060735", "in": 1.5, "dur": 5.0, "zoom": 1.0, "beat": "the ride down"},
+        {"scene": 25,   "clip": "2581892b-24e8-419a-a707-203bbbb46e4d", "in": 2.0, "dur": 5.5, "zoom": 1.0, "beat": "splash and victory bounce"}
+      ]
+    },
+    {
+      "slug": "pip-big-bucket-splash",
+      "title": "The Big Bucket Splashes Pip",
+      "duration": 30.0,
+      "audio_start": 76.0,
+      "segments": [
+        {"scene": 7,  "clip": "510546d8-5b7f-4c93-9ffc-fd28309bf084", "in": 2.0, "dur": 4.5, "zoom": 1.0, "beat": "surprise ground fountain"},
+        {"scene": 8,  "clip": "13a5b7a6-cd9b-450e-aaf1-c0708e7a814d", "in": 2.0, "dur": 4.5, "zoom": 1.0, "beat": "the proud dodge"},
+        {"scene": 9,  "clip": "5574d952-5bf7-423c-a145-a6886eacecc3", "in": 2.0, "dur": 6.0, "zoom": 1.0, "beat": "sprayed from behind"},
+        {"scene": 12, "clip": "1e891c5e-fd8f-49bc-8b40-070eee0de936", "in": 3.0, "dur": 4.5, "zoom": 1.0, "beat": "the bucket tips"},
+        {"scene": 13, "clip": "802dd576-b2e2-46b4-9e4a-c3e70dd3cbe5", "in": 2.0, "dur": 7.0, "zoom": 1.0, "beat": "PAYOFF - the dump"},
+        {"scene": 10, "clip": "f74d4a09-64b1-4a16-b2e9-1c511a28281c", "in": 3.0, "dur": 3.5, "zoom": 1.0, "beat": "soggy Teddy button"}
+      ]
+    }
+  ]
+}
