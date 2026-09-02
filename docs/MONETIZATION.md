@@ -57,6 +57,18 @@ The realistic read: YPP acceptance is the unlock, and long-form watch time is
 where the money eventually is — but the door opens through Shorts. Get in
 first, then long-form becomes worth making again.
 
+## Superseded in part — read `docs/CONTENT_STRATEGY.md` first
+
+The 30-day analytics export (Aug 5 – Sep 1) revised two conclusions below:
+
+- The real split is **habit content vs story content**, not long-form vs Shorts.
+  Habit content wins in both formats; the story-format long-form got 4 views
+  while the habit-format long-form got 12,749.
+- Long-form is back in play. One long-form upload produced **152.7 watch
+  hours** in 30 days. At that rate ~20 uploads clears the 3,000-hour gate,
+  which is a shorter path than 3,000,000 Shorts views. Confirm against the Earn
+  tab first — it read 4 qualified hours, which does not reconcile.
+
 ## Production consequences
 
 1. **Shorts are the default format now.** 9:16, 1080x1920, 20–40s. Long-form

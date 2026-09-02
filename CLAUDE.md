@@ -40,6 +40,7 @@ Detailed rules live in `docs/`. Do not duplicate them into episode files.
 | **Verified** Higgsfield model IDs and params | `docs/HIGGSFIELD_REFERENCE.md` |
 | Titles, descriptions, tags | `docs/METADATA_GUIDE.md` |
 | **Current channel goal** and cost-per-Short math | `docs/MONETIZATION.md` |
+| **What actually gets views** — analytics-driven topic rules | `docs/CONTENT_STRATEGY.md` |
 
 ## Environment (read this first each session)
 
