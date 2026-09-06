@@ -1,0 +1,70 @@
+{
+  "_note": "Five 9:16 habit Shorts, 5 shots x 6s = 30s each. Topics chosen by the rule in docs/CONTENT_STRATEGY.md: visible mess + visible resistance. Image job IDs double as kling start_image inputs.",
+  "image_model": "nano_banana_pro",
+  "image_params": {"resolution": "2k", "aspect_ratio": "9:16"},
+  "image_reference": "54c9aaff-0c9a-4ab1-ac43-b829aef60edc",
+  "video_model": "kling3_0",
+  "video_params": {"mode": "pro", "sound": "off", "aspect_ratio": "9:16", "duration": 6},
+  "declined_preset_id": "24bae836-2c4a-48e0-89b6-49fcc0b21612",
+  "shorts": [
+    {
+      "slug": "wash-your-hair",
+      "title": "Wash Your Hair Song with Mommy",
+      "shots": [
+        {"n": 101, "beat": "bubbles, hair still dry, shampoo bottle", "image": "3807c311-3f3d-4c92-98b9-6960de6492ba", "video": "ac08e8d2-1cc5-4a0b-bd95-0a79475b1d67"},
+        {"n": 102, "beat": "water pour, face scrunch", "image": "e86723dd-3392-4be2-8829-7c18aad22508", "video": "d938d6bc-3c5f-4de2-9cdd-661fc92c5bbc"},
+        {"n": 103, "beat": "foam mohawk", "image": "6640eefd-c671-4f11-b993-25fc1f107e6d", "video": "aaff2b00-49c4-4c17-aab9-9409c69b5a98"},
+        {"n": 104, "beat": "TEDDY BEAT - matching foam hat", "image": "d8dc573e-a6fe-427d-bedd-8468f7f4f364", "video": "fcaa8746-0ade-43bd-b66c-c4b9825d9961"},
+        {"n": 106, "beat": "PAYOFF - clean, proud, celebration", "image": "485ab5f3-c74b-4d82-878d-9b68d67dd291", "video": "d4efd029-2343-4790-b3fa-29b64496b1fe"}
+      ]
+    },
+    {
+      "slug": "potty-time",
+      "title": "Potty Time Song with Mommy",
+      "shots": [
+        {"n": 201, "beat": "HOOK - the uh-oh freeze", "image": "e926cbd4-69d8-4fcf-9f96-b96bb29d44e5", "video": "8014fc11-7ebb-40be-8fa2-659ce37e3c1e"},
+        {"n": 202, "beat": "the dash", "image": "bfaa57b6-f27e-42d0-819b-795a6a45f549", "video": "ec6263b5-7db1-4f21-8fc9-af1cfbd2b212"},
+        {"n": 203, "beat": "TEDDY BEAT - waiting, matching poses", "image": "ca3eafc8-7047-4ccd-9ff7-364b801de02e", "video": "23be8cc6-2531-4f02-a1a0-ec540a889e8c"},
+        {"n": 204, "beat": "PAYOFF - triumph", "image": "7d594734-b681-4472-80a4-f3333f2a59dd", "video": "68730583-d20e-4e66-8aa2-de5b3ed05cb2"},
+        {"n": 205, "beat": "warm close - handwashing", "image": "57bcae8c-78ea-4206-8225-126cd19e6828", "video": "5b46de44-4e02-4b8a-9868-c03cf7276612"}
+      ]
+    },
+    {
+      "slug": "out-of-the-bath",
+      "title": "Time to Get Out of the Bath",
+      "shots": [
+        {"n": 301, "beat": "HOOK - arms folded, no", "image": "8a78519c-d06e-476e-b941-e06eec0e9cd9", "video": "7606c177-32c1-4a28-be78-4876334bf420"},
+        {"n": 302, "beat": "the big splash", "image": "569b0eaf-7dd8-46d9-af8d-594221404e5a", "video": "d4a71094-9687-402d-b31d-93ef90e02713"},
+        {"n": 303, "beat": "two more minutes negotiation", "image": "e63116f9-4a3b-465d-8e9c-579713182967", "video": "d5d299de-3c3a-442b-aafd-cf51df512538"},
+        {"n": 304, "beat": "the towel bundle", "image": "a6712977-ddde-42fd-8471-e1de0c0f5e92", "video": "81252704-b882-434b-9ca0-5aefe2418f25"},
+        {"n": 305, "beat": "warm close - snuggle", "image": "a98d8b87-cd4d-4677-8302-89ca9e1b2894", "video": "03b00aae-f0f4-4909-969c-3a63f55e6e13"}
+      ]
+    },
+    {
+      "slug": "eat-your-broccoli",
+      "title": "Eat Your Broccoli Song with Mommy",
+      "shots": [
+        {"n": 401, "beat": "HOOK - horror at the plate", "image": "f35abd22-e451-4e6f-ba00-66767922433a", "video": "606e89b9-3155-43ba-8172-d87c3d4069af"},
+        {"n": 402, "beat": "hiding it, caught", "image": "a0966d09-d5f0-480e-8646-3531ca12e6ab", "video": "04a0a328-b694-4dc4-b58e-97110e1af6fb"},
+        {"n": 403, "beat": "the walking tree", "image": "35265e33-7159-4847-9216-eb5a0e669d91", "video": "501c79a8-a227-46f1-a5bf-ef94b237fd13"},
+        {"n": 404, "beat": "PAYOFF - the brave bite", "image": "1f9ace42-9abb-45c4-b58a-3dddcfce736a", "video": "6f5405fa-512b-4f19-bcc4-777bd66c8bdd"},
+        {"n": 405, "beat": "TEDDY BEAT - strongman finish", "image": "451ddd7e-b992-4347-959f-10ab33397ed8", "video": "e93e0c62-bb47-4645-8fa0-ea811b303ed8"}
+      ]
+    },
+    {
+      "slug": "sticky-hands",
+      "title": "Sticky Hands Song with Mommy",
+      "shots": [
+        {"n": 501, "beat": "HOOK - jam face straight to camera", "image": "16ed0819-b44c-4951-a269-82c94cd868a6", "video": "41452154-d6e7-4280-b0fc-f9ceb724b1d1"},
+        {"n": 502, "beat": "TEDDY BEAT - the intercepted reach", "image": "78f40c3d-bf97-4f88-abc3-0fb4ba84aba2", "video": "2461c7a6-0860-43b3-825b-3a35e914198f"},
+        {"n": 503, "beat": "the stretchy sticky hands", "image": "c22f8288-ed35-46f1-97a1-7bc236c580cc", "video": "c3f2d87e-c969-4300-880a-bf5b18ff1c04"},
+        {"n": 504, "beat": "foam gloves at the sink", "image": "9abc39fa-245a-4c2e-96b8-e3e8a03b97a5", "video": "238e1d17-ac0f-43ee-9ef6-49066999f20f"},
+        {"n": 505, "beat": "PAYOFF - clean hands, jam on nose", "image": "1b6c1504-69cb-464a-bee3-093bb3edda05", "video": "6e3b3044-1ffa-4acf-846f-9aefe825eee7"}
+      ]
+    }
+  ],
+  "abandoned": [
+    {"n": 105, "job": "87bdaf29-08b7-4253-9740-16e319bedcc3", "model": "nano_banana_pro", "status": "failed",
+     "note": "Wash Your Hair finale. Original wording described water sheeting down over Pip with his head tipped all the way back. Replaced by 106, a head-and-shoulders portrait of the same beat after the rinse rather than during it. Bath finales should be framed after the water, not mid-pour."}
+  ]
+}
