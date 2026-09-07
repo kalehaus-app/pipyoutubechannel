@@ -89,3 +89,54 @@ however fast it is cut.
 Suno songs come back around 35-40s, not 30. Plan 7 clips so there is enough
 source to fill one, rather than trimming the song and losing its ending. The
 song defines the runtime — the same rule as long-form.
+
+## Suno style prompt — locked
+
+Reuse this verbatim on every Short. A channel gets a recognisable sound by
+never tuning the style per song.
+
+**Style:**
+
+```
+kids dance pop, nursery rhyme dance track, 138 BPM, four-on-the-floor kick drum,
+big punchy kick on every single beat, driving stomp-clap beat, high energy,
+bright major key, warm playful female lead vocal, chanting singalong hook,
+marimba and ukulele, tambourine, hand claps, finger snaps, party energy,
+punchy loud clean mix, no intro - kick and vocal hit together on beat one
+```
+
+**Exclude:**
+
+```
+slow, ballad, lullaby, mellow, dreamy, ambient, swing, shuffle, sparse percussion,
+rap, distorted guitar, dark tones, long intro, instrumental break, fade out ending
+```
+
+Tempo history: 118 BPM was tried first and reads as a lullaby. **128-138 is the
+working range**; "four-on-the-floor" is the term that actually produces a kick on
+every beat, which is what "boom boom boom boom" means in Suno's vocabulary.
+
+### Write lyrics to the tempo
+
+At 138 BPM short lines finish early and leave the kick thumping alone. Choruses
+need to be chantier and more repetitive than they look on the page:
+
+```
+Splash splash splash, out you hop!
+Splash splash splash, don't you stop!
+```
+
+beats one clean flowing line. Short punchy syllables ride a kick drum; long
+phrases fight it.
+
+### Lead with the chorus
+
+Move the `[Chorus]` block above the first `[Verse]`. There is about one second
+before someone scrolls — spend it on the hook, not the setup.
+
+### Cut on the downbeat
+
+When the track is four-on-the-floor, read the tempo off the MP3 and place every
+cut on a beat boundary. At 138 BPM that is a cut every 1.74s (4 beats) or 2.61s
+(6 beats). Cutting *to* the kick rather than near it is most of what separates a
+tight fast Short from a merely busy one, and it costs nothing at assembly time.
