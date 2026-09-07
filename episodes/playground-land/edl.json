@@ -1,0 +1,51 @@
+{
+  "_note": "Beat-matched edit. Song 'Playground Land' measured at 141.5 BPM (beat = 0.424028s). Every cut lands on a beat boundary; section boundaries land on bar lines (4 beats). Video total = 66 beats = 27.986s, which is where the music ends; the MP3's 29.688s includes a silent tail that is deliberately dropped so the Short loops cleanly.",
+  "song": {
+    "title": "Playground Land",
+    "media_id": "c39a4ebf-004a-4b8e-ae84-ca42bbf73b06",
+    "file_duration": 29.688,
+    "music_ends": 28.0,
+    "bpm": 141.5,
+    "beat_seconds": 0.424028,
+    "style": "dubstep - first Short on the channel using it"
+  },
+  "energy_map": {
+    "_method": "RMS in 1s buckets, peak-normalised",
+    "verse": "0-6.8s moderate (~2400-3300)",
+    "drop_1": "6.8s energy jumps ~70% to ~5600, holds to 17.8s",
+    "breakdown": "18-20s dips to ~3000",
+    "drop_2": "20.4s rises to 6025, the peak of the track, holds to 25s",
+    "outro": "25-28s tapers, final hit at 27s"
+  },
+  "canvas": "1080x1920",
+  "fps": 24,
+  "cut_style": "hard cuts on the beat, no crossfades",
+  "sections": [
+    {"name": "verse",     "beats": "0-16",  "cut_every": "4 beats / 1.696s", "shots": 4},
+    {"name": "DROP 1",    "beats": "16-44", "cut_every": "3 beats / 1.272s", "shots": 9},
+    {"name": "breakdown", "beats": "44-48", "cut_every": "held 4 beats",     "shots": 1},
+    {"name": "DROP 2",    "beats": "48-58", "cut_every": "3-4 beats",        "shots": 3},
+    {"name": "outro",     "beats": "58-66", "cut_every": "held 3 then 5",    "shots": 2}
+  ],
+  "shots": [
+    {"n": 1,  "sec": "verse",     "clip": 601, "in": 0.30, "beats": 4, "zoom": 1.00, "beat": "HOOK - rockets down the slide"},
+    {"n": 2,  "sec": "verse",     "clip": 602, "in": 0.40, "beats": 4, "zoom": 1.00, "beat": "swinging high"},
+    {"n": 3,  "sec": "verse",     "clip": 601, "in": 2.60, "beats": 4, "zoom": 1.35, "beat": "slide, punch in"},
+    {"n": 4,  "sec": "verse",     "clip": 603, "in": 0.40, "beats": 4, "zoom": 1.00, "beat": "roundabout spin"},
+    {"n": 5,  "sec": "DROP 1",    "clip": 603, "in": 2.40, "beats": 3, "zoom": 1.30, "beat": "spin, punch in - lands ON the drop"},
+    {"n": 6,  "sec": "DROP 1",    "clip": 602, "in": 2.60, "beats": 3, "zoom": 1.35, "beat": "swing, punch in"},
+    {"n": 7,  "sec": "DROP 1",    "clip": 605, "in": 0.40, "beats": 3, "zoom": 1.00, "beat": "sprinting away"},
+    {"n": 8,  "sec": "DROP 1",    "clip": 607, "in": 0.40, "beats": 3, "zoom": 1.00, "beat": "climbing the ladder"},
+    {"n": 9,  "sec": "DROP 1",    "clip": 601, "in": 4.20, "beats": 3, "zoom": 1.00, "beat": "slide again"},
+    {"n": 10, "sec": "DROP 1",    "clip": 605, "in": 2.20, "beats": 3, "zoom": 1.30, "beat": "sprint, punch in"},
+    {"n": 11, "sec": "DROP 1",    "clip": 603, "in": 4.20, "beats": 3, "zoom": 1.00, "beat": "spin wide"},
+    {"n": 12, "sec": "DROP 1",    "clip": 607, "in": 2.40, "beats": 3, "zoom": 1.30, "beat": "climb, punch in"},
+    {"n": 13, "sec": "DROP 1",    "clip": 602, "in": 4.20, "beats": 4, "zoom": 1.00, "beat": "swing wide, ride out the drop"},
+    {"n": 14, "sec": "breakdown", "clip": 604, "in": 0.60, "beats": 4, "zoom": 1.00, "beat": "'NO I don't wanna go' - held on the energy dip"},
+    {"n": 15, "sec": "DROP 2",    "clip": 606, "in": 0.50, "beats": 3, "zoom": 1.00, "beat": "ONE more turn! - lands ON drop 2"},
+    {"n": 16, "sec": "DROP 2",    "clip": 607, "in": 4.20, "beats": 3, "zoom": 1.00, "beat": "climbs again"},
+    {"n": 17, "sec": "DROP 2",    "clip": 601, "in": 1.40, "beats": 4, "zoom": 1.25, "beat": "PAYOFF - last ride down"},
+    {"n": 18, "sec": "outro",     "clip": 608, "in": 0.50, "beats": 3, "zoom": 1.00, "beat": "bye-bye wave to the slide"},
+    {"n": 19, "sec": "outro",     "clip": 609, "in": 0.40, "beats": 5, "zoom": 1.00, "beat": "carried home, last wave"}
+  ]
+}

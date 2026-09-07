@@ -1,0 +1,25 @@
+{
+  "_note": "Playground Land - first dubstep Short. 9 shots x 6s generated, cut to 19 beat-matched shots. Image job IDs double as kling start_image inputs.",
+  "image_model": "nano_banana_pro",
+  "image_params": {"resolution": "2k", "aspect_ratio": "9:16"},
+  "image_reference": "54c9aaff-0c9a-4ab1-ac43-b829aef60edc",
+  "video_model": "kling3_0",
+  "video_params": {"mode": "pro", "sound": "off", "aspect_ratio": "9:16", "duration": 6},
+  "declined_preset_id": "24bae836-2c4a-48e0-89b6-49fcc0b21612",
+  "song_media_id": "c39a4ebf-004a-4b8e-ae84-ca42bbf73b06",
+  "output_media_id": "0d86ec44-0345-4357-b16f-ad2bcd7a75a0",
+  "output": {"duration": 28.292, "canvas": "1080x1920", "shots": 19, "size_bytes": 28953240},
+  "clips": [
+    {"n": 601, "beat": "HOOK - rockets down the rainbow slide",  "image": "2e4c6c26-6a8c-4ce4-bcce-f75edaf0998b", "video": "c6e1b923-d0fd-4602-96ee-33017f33c84f"},
+    {"n": 602, "beat": "swinging high, legs out",                "image": "b8ddda2f-d0e1-404e-9316-42f5c1ee6e17", "video": "980e0fd7-ba0c-4ec7-814a-898c55268046"},
+    {"n": 603, "beat": "roundabout spin, motion blur",           "image": "4bae1af4-229e-4153-bf0b-c3b1d2ac5354", "video": "d53ff397-f605-4d4b-8ca5-da687adf9d16"},
+    {"n": 604, "beat": "the NO - arms folded, head shake",       "image": "c5ae87da-e63e-4b33-a86e-27b96e57329a", "video": "dbb87010-f366-4e28-989a-572b1c7f2934"},
+    {"n": 605, "beat": "sprints away, Mommy in playful chase",   "image": "5c46e4c9-12e4-47f9-93e1-33a29d746a13", "video": "c4890ac3-a88d-4c0c-8484-d45e4f1f1885"},
+    {"n": 606, "beat": "ONE more turn - one finger, pleading",   "image": "37640e38-5f44-43be-80b9-5ac451fc344b", "video": "4e60075e-b808-4f82-bf91-4d5806da58d9"},
+    {"n": 607, "beat": "scrambles up the slide ladder",          "image": "45b9723a-bc4e-4d6c-8780-b249d2d390f7", "video": "382ef955-11dc-4248-8482-e5c3ce84438f"},
+    {"n": 608, "beat": "TEDDY BEAT - waves the bear's paw bye",  "image": "4a156f09-c226-4bb1-864d-60590d3de1ce", "video": "1a9fd7b6-be70-49f7-8c7b-66e956ed9e35"},
+    {"n": 609, "beat": "carried home, last wave over shoulder",  "image": "bf3f6ad7-d3f7-4ba0-876e-1d4c05bf2b9a", "video": "01153716-d22c-4296-8504-1a72a5f12702"}
+  ],
+  "abandoned": [],
+  "notes": "Zero failures across all 18 generations - 9 stills and 9 clips, first try. The empty-playground casting ban ('no other children, no bystanders anywhere in the background') was stated in every prompt and cost nothing."
+}
