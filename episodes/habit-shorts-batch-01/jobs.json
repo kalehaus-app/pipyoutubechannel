@@ -334,5 +334,38 @@
       "duration": 37.872,
       "note": "No intro, no trailing silence - audible 0.00 to 37.25s. Video was sized to the song, not the reverse."
     }
+  },
+  "out_of_the_bath_versions": {
+    "_note": "Three cuts of this Short exist. v3 is the one to publish.",
+    "v1_slow_silent": "435ce213-3839-4ae1-bb18-50aaae9ad3c9 - 5 shots x 6s, no audio, superseded",
+    "v2_cozy_owl_towel": "0ecc59ff-995a-496a-bfe7-ddaa75917287 - 13 shots, 118.5 BPM song, 38.08s",
+    "v3_cozy_owl_dubstep": "3baa80f3-f717-47e9-8692-551bcd8199ef - 18 shots, 141.5 BPM dubstep, 27.83s, beat-matched",
+    "songs": {
+      "cozy_owl_towel": "a9bfe389-63fe-4e26-b868-af54daab15b1",
+      "cozy_owl_dubstep": "b3c66a6c-2483-46f7-b2d2-f81de5352934"
+    }
+  },
+  "extra_action_clips": {
+    "_note": "Generated to raise the on-screen action for the faster cut. All three carry the drops in v3.",
+    "309_kick_foam_spray": {
+      "image": "aabf3332-492e-4e71-a2ef-5f1272625859",
+      "video": "83420e89-026e-4ed4-b92a-0738482a93a5"
+    },
+    "310_bubbles_in_air": {
+      "image": "27bdf82c-3a44-42cd-9628-1c49b8d37ce2",
+      "video": "1618e2df-44b5-4f87-8e79-b9be0a5212ce"
+    },
+    "311_towel_run_at_camera": {
+      "image": "091ff66d-ae27-4c58-8d2a-16f970f04ba3",
+      "video": "7a29c0b7-0673-44a1-8d24-62777926f016"
+    },
+    "307_duck_zoom": {
+      "image": "7146d248-4b01-4ec8-b52d-6088287b5c4c",
+      "video": "186c2ab0-5dbe-470c-9353-87b6866159bc"
+    },
+    "308_towel_spin": {
+      "image": "502a712e-bf3b-48aa-9e23-1632c8d1bf33",
+      "video": "77650cfb-ae68-4396-bc94-63c981dfec75"
+    }
   }
 }
