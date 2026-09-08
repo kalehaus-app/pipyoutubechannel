@@ -61,12 +61,38 @@ subscribe.
 empty-playground casting ban ("no other children, no bystanders anywhere in the
 background") was stated in every prompt and cost nothing.
 
-## Not verified
+## Verified — and one casting defect
 
-No frame of this has been seen. The CDN is blocked from the session container and
-no frame-viewing path exists. Unchecked: whether 1.27s reads as exciting or merely
-frantic on a phone; whether an entirely empty playground looks odd; whether Mommy
-reads as adult-sized throughout. All are cheap to fix — one shot is ~11 credits.
+Frames were pulled from the finished MP4 and inspected (2026-09-08). ffmpeg was
+installed via `scripts/setup_env.sh`, then `fps=1/2` stills plus targeted
+`-ss` grabs across the tail.
+
+Confirmed good: Pip is on-model throughout, the `Pip` romper lettering is the
+only on-screen text, the playground is empty of other children, and Mommy reads
+as a full-grown adult in the swing and walking shots.
+
+**Defect — two Mommies in the closing shot.** The outro (clip 609, roughly
+25.4s to the end) renders **two adult women** fused around Pip: two heads, two
+faces, an extra arm. It is faint at 25.5s and unmistakable by 27.5s, where both
+faces are fully resolved and looking at camera. This breaks the
+one-adult/one-toddler non-negotiable, and it sits on the single most important
+beat — the warm ending that earns the subscribe.
+
+Root cause is the usual one for a hug composition: an adult holding a child
+from behind gives the model two plausible head positions in the same silhouette,
+and the prompt did not forbid the second one.
+
+Fix — regenerate clip 609 only, ~11 credits. Do not re-run the batch; the other
+eight clips are clean. Add to the prompt explicitly:
+
+> Exactly one adult woman in frame, seen from behind over her right shoulder.
+> One head, one face, two arms. No second adult, no second face, no bystanders.
+
+Until it is regenerated the last ~2.5s should be trimmed or the shot swapped for
+a held frame from clip 603.
+
+Also still unverified: whether the 1.27s drop cuts read as exciting or merely
+frantic on a phone. That needs a human watching it at Shorts size.
 
 ## Cost
 
